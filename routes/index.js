@@ -31,11 +31,13 @@ router.get('/mocainfconpany', function(req, res, next) {
     });
     alvaro=lista[0];
     console.log(alvaro);
-    res.statusCode = 302;
+    /*res.statusCode = 302;
     res.setHeader("Location", alvaro);
-    res.end();
+    res.end();*/
     //res.render('index', { title: empresas });
     //res.open("http://www.google.com");
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ url: alvaro }));
 });
   //console.log(alvaro);
   //res.render('index', { title: empresas });
