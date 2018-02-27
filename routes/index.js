@@ -31,15 +31,19 @@ router.get('/mocainfconpany', function(req, res, next) {
     });
     alvaro=lista[0];
     console.log(alvaro);
-    /*res.statusCode = 302;
+    res.statusCode = 302;
     res.setHeader("Location", alvaro);
-    res.end();*/
-    res.render('index', { title: empresas });
+    res.end();
+    //res.render('index', { title: empresas });
     //res.open("http://www.google.com");
 });
   //console.log(alvaro);
   //res.render('index', { title: empresas });
 });
+//key  local
+//http://localhost:3000/mocainfconpany?empresa=pomodoro
+//key global
+//https://openlinkgoogle.herokuapp.com/mocainfconpany?empresa=acex
 
 
 module.exports = router;
