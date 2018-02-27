@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action='/mocainfconpany', method='get')
+    div
+      label(for='empresa') Empresa
+      input#empresa(type='text', name='empresa')
+    .button
+      button(type='submit') Buscar empresa
